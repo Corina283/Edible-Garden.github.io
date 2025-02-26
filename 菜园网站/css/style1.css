@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: rgb(95, 91, 92);
+    height:80px;
+    width:100%;
+}
+h1{
+    color:antiquewhite;
+    position:absolute;
+    line-height:80px;
+    left: 50px;
+}
+.timeline {
+    background-color:rgb(159, 169, 159);
+    height:90vh;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+.event {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* 设计旁边的圆点border-radius足够大就可以显示 */
+
+.event::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -5px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.event .date {
+    padding: 5px;
+    background-color: #ccc;
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    text-align: center;
+    left: -120px;
+}
+.event .content {
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+}
+
